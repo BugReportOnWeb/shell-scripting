@@ -17,4 +17,3 @@ if [ -e $FILE ]
         echo "$FILE does not exist"        
 fi
 
-
