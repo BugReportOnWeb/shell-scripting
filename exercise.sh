@@ -3,5 +3,5 @@
 # Author: Dev
 # Exercise script follows from here:
 
-MESSAGE="Shell Scripting is Fun!"
-echo $MESSAGE
+HOST=$(hostname)
+echo "This script is running on $HOST"
