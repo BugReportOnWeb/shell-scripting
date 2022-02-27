@@ -5,7 +5,7 @@
 # Script follows here:
 
 # Asking if they know there \$PS1 and if not telling it to them
-next_step() {
+# next_step() {
     echo "Do you know your \$PS1? (Y/n)"
     read ANS
     
@@ -21,10 +21,10 @@ next_step() {
         echo "Invalid choice!"
         another_trial        
     fi
-}
+#}
 
 # Function to call only when user input wrong info in the Y/n input
-another_trial() {
+#another_trial() {
     echo "Wanna try again? (Y/n)"
     read ANOTHER
     if [ $ANOTHER == 'Y' ] || [ $ANOTHER == 'y' ]
@@ -37,10 +37,10 @@ another_trial() {
         echo "Invalid Choice! Please enter from Y/y for 'Yes' or N/n for 'No'"
         another_trial
     fi
-}
+#}
 
 # Checking if the user name is 'Dev'
-checking_user() {
+#checking_user() {
     if [ $NAME == 'Dev' ]
     then
         echo 'Welcome Dev!'
@@ -49,9 +49,9 @@ checking_user() {
         echo "You aren't Dev, are you?"
         return
     fi
-}
+#}
 
-echo "What's your name?"
-read NAME
-checking_user
+#echo "What's your name?"
+#read NAME
+#checking_user
 
