@@ -3,4 +3,5 @@
 # Author: Dev
 # Exercise script follows from here:
 
-echo "Shell Scripting is Fun!"
+MESSAGE="Shell Scripting is Fun!"
+echo $MESSAGE
