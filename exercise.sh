@@ -9,10 +9,10 @@ long_listing() {
     ls -l $DIR
 }
 
-# Checking for the type of file or the dir
-echo "Type the file or a dir path:"
-read LOC
+# Taking path input as a argument
+LOC=$1
 
+# Chekcing for the file type
 if [ -d $LOC ]
 then
     echo "It is a directory"
