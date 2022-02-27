@@ -3,17 +3,29 @@
 # Author: Dev
 # Exercise script follows from here:
 
-FILE=/home/dev/Development/rickroll
-if [ -e $FILE ]
-    then
-        echo "$FILE passwords are enabled"
-        if [ -x $FILE ]
-            then
-                echo "You have permissions to edit $FILE"
-            else
-                echo "You do NOT have permissions to edit $FILE"
-        fi
-    else
-        echo "$FILE does not exist"        
+# Performing function of long listing
+long_listing() {
+    DIR=$1
+    ls -l $DIR
+}
+
+# Checking for the type of file or the dir
+echo "Type the file or a dir path:"
+read LOC
+
+if [ -d $LOC ]
+then
+    echo "It is a directory"
+elif [ -f $LOC ]
+then
+   echo "It is a regular file"
+elif [ -e $LOC ]
+then
+   echo "It is another type of a file" 
+else
+    echo "Invalid Path"
 fi
 
+# Printing the long listing of the specified $PATH
+echo "Here is the long listing of the $LOC:"
+long_listing $LOC
