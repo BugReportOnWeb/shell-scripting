@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/fish
 
 # Author: Dev
 # Copyright (c) { Not yet :( }
