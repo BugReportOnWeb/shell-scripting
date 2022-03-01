@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/fish
 
 # Author: Dev
 # Exercise script follows from here:
@@ -9,7 +9,24 @@ DATE=$(date +%F)
 prefix_fill() {
     echo -e "Type the prefix for your file (Default YYYY-MM-DD): " | tr -d "\n"; read PREFIX
 
-    if [[ $PREFIX == "" ]]; then
+    if [[ $FILE == $PREFIX.$EXT ]]; then
+        echo "** $FILE and $PREFIX.$EXT are the same file. **"
+       
+        # Function to call if the prefix and original file name are the same
+        start_again() {
+            echo "Press <ENTER> to choose a different prefix or type 'e' to shift to the next file: " | tr -d "\n"; read NEXT
+            if [[ $NEXT == "e" ]]; then
+                echo "=========================================================================================="
+                return
+            elif [[ $NEXT == "" ]]; then
+                prefix_fill
+            else
+                echo "Invalid Input! Try again"
+                start_again
+            fi
+        }; start_again
+   
+    elif [[ $PREFIX == "" ]]; then
         NEWFILE=$DATE-$FILE
         change
     else
@@ -27,17 +44,17 @@ change() {
     change_again() {
         echo -e "Are you satisfied with the change? (Y/n): " | tr -d "\n"; read CHANGE
 
-        if [[ $CHANGE == "Y" ]] || [[ $CHANGE == "y" ]] || [[ $CHANGE == "" ]]; then
+        if [[ $CHANGE == "Y" || $CHANGE == "y" || $CHANGE == "" ]]; then
             mv $FILE "$NEWFILE"
-        elif [[ $CHANGE == "N" ]] || [[ $CHANGE == "n" ]]; then
+            # echo "=========================================================================================="
+            echo "============================================"
+        elif [[ $CHANGE == "N" || $CHANGE == "n" ]]; then
             prefix_fill
         else
             echo "Invalid input. Please try again"
             change_again
         fi 
-    }
-
-    change_again
+    }; change_again
 }
 
 for FILE in $(ls)
