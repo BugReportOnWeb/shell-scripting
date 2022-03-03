@@ -1,4 +1,4 @@
-#!/bin/fish
+#!/bin/bash
 
 # Author: Dev
 # Exercise script follows from here:
