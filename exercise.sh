@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # Author: Dev
 
@@ -57,7 +57,7 @@ change() {
 
 for FILE in $(ls)
 do
-    EXT=${FILE: -3}
+    EXT=$(echo $FILE | cut -d. -f2)
     echo -e "$FILE is a $EXT file. " | tr -d "\n"; prefix_fill
 done
 
