@@ -2,4 +2,4 @@
 
 # Author: Dev
 
-set PID (ps aux | grep -i $1 | head -n 1 | cut -d' ' -f8); kill $PID
+set PID (ps aux | grep -i $argv | head -n 1 | cut -d' ' -f8); kill $PID
