@@ -55,6 +55,7 @@ change() {
     }; change_again
 }
 
+# Main block
 for FILE in $(ls)
 do
     EXT=$(echo $FILE | cut -d. -f2)
