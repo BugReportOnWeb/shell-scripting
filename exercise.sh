@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/sh
 
 # Author: Dev
 
@@ -15,7 +15,7 @@ prefix_fill() {
         start_again() {
             echo "Press <ENTER> to choose a different prefix or type 'e' to shift to the next file: " | tr -d "\n"; read NEXT
             if [[ $NEXT == "e" ]]; then
-                echo "=========================================================================================="
+                echo "==================================================================================="
                 return
             elif [[ $NEXT == "" ]]; then
                 prefix_fill
@@ -45,7 +45,7 @@ change() {
 
         if [[ $CHANGE == "Y" || $CHANGE == "y" || $CHANGE == "" ]]; then
             mv $FILE "$NEWFILE"
-            echo "============================================"
+            echo "==========================================="
         elif [[ $CHANGE == "N" || $CHANGE == "n" ]]; then
             prefix_fill
         else
