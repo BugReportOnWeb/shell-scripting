@@ -17,8 +17,8 @@
 
         ./[dir]
             | - main
-                | - ./[file] (executale file)
-            | - src (dir to run script on)
+                | - ./[file]        # executale file
+            | - src                 # dir to run script on)
                 | - [file].asm
                 | - [file].o
         ```
