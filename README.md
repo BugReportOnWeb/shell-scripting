@@ -22,3 +22,5 @@
                 | - [file].asm
                 | - [file].o
         ```
+        
+    * **start_iwd.sh:** Script to check if IWD is running of not and if the latter, start the IWD and launch IWCTl for network configuration. => Also used as a FISH function in _~/.config/fish/functions_
