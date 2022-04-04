@@ -5,13 +5,13 @@ set EXT (echo $argv | cut -d. -f2)
 function main
     switch $EXT
         case c
-            gcc main.c && ./a.out
+            gcc $argv && ./a.out
         case cpp
-            g++ main.cpp && ./a.out
+            g++ $argv && ./a.out
         case asm
-            nasm -f elf32 main.asm -o main.o && ld -m elf_i386 main.o -o a.out && ./a.out
+            nasm -f elf32 $argv && ld -m elf_i386 (echo $argv | cut -d. -f1).o && ./a.out
         case '*'
             return 1
     end
 end
-main
+main $argv
