@@ -24,3 +24,5 @@
         ```
         
     * **start_iwd.sh:** Script to check if iwd is running of not and if the latter, start the iwd and launch iwctl for network configuration. => Also used as a FISH function in _~/.config/fish/functions_
+
+    * **comp_check.sh:** Script to automate the compiling process for C/C++/Assembly files. `./comp_check.sh [FILE]` => Alse used as a FISH funciton in _~/.config/fish/functions/_
