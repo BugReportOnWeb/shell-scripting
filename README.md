@@ -1,8 +1,8 @@
 # Shell Scripting
 
-* **exercise.sh:** Simple shell scripting [exercises](https://medium.com/@sankad_19852/shell-scripting-exercises-5eb7220c2252)
+* **changer.sh:** Script to rename all the elements in a directory.
 
-* **./liners:** One liner shell (FISH) scripts
+* **./liners:** One liner shell (FISH) scripts.
     * **file_size.sh:** Script to print the size of the file. `./file_size [FILE]`
 
     * **finish_ps.sh:** Script to finish a process. `./finish.sh [PROCESS_NAME]` => Also used as a FISH function in _~/.config/fish/functions/_
