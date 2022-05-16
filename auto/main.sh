@@ -21,13 +21,13 @@ function lets_go
 
                     echo -e "Opening MAIN link..."
                     open MAIN_LINK
-                    sleep 3600
+                    sleep 3530
                 else if test 
                     \($hour = "09" -a $min = "00" -a $value = "AM"\)
 
                     echo -e "Opening OTHER link"
                     open DET_LINK
-                    sleep 3600
+                    sleep 3530
                 end
             case "Tuesday"
                 if test
@@ -36,14 +36,14 @@ function lets_go
 
                     echo -e "Opening MAIN link..."
                     open MAIN_LINK
-                    sleep 3600
+                    sleep 3530
                 else if test
                     \($hour = "10" -a $min = "50" -a $value = "AM"\) -o
                     \($hour = "03" -a $min = "25" -a $value = "PM"\)
 
                     echo -e "Opening OTHER link"
                     open DET_LINK
-                    sleep 3600
+                    sleep 3530
                 end
             case "Wednesday"
                 if test
@@ -54,7 +54,7 @@ function lets_go
 
                     echo -e "Opening MAIN link..."
                     open MAIN_LINK
-                    sleep 3600
+                    sleep 3530
                 end
             case "Thursday"
                 if test
@@ -65,13 +65,13 @@ function lets_go
 
                     echo -e "Opening MAIN link..."
                     open MAIN_LINK
-                    sleep 3600
+                    sleep 3530
                 else if test
                     \($hour = "01" -a $min = "35" -a $value = "PM"\)
 
                     echo -e "Opening OTHER link"
                     open DET_LINK
-                    sleep 3600
+                    sleep 3530
                 end
             case "Friday"
                 if test
@@ -82,13 +82,13 @@ function lets_go
 
                     echo -e "Opening MAIN link..."
                     open MAIN_LINK
-                    sleep 3600
+                    sleep 3530
                 else if test
                     \($hour = "01" -a $min = "35" -a $value = "PM"\)
 
                     echo -e "Opening OTHER link"
                     open DET_LINK
-                    sleep 3600
+                    sleep 3530
                 end
             case '*'
                 echo "Today is weedend!"
