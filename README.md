@@ -1,6 +1,17 @@
 # Shell Scripting
 
+<h1 id="header" align="center">
+    Shel Scripting
+    <div id="badges">
+        <img src="https://img.shields.io/github/last-commit/BugReportOnWeb/shell-scripting" />
+    </div>
+</h1>
+
 * **changer.sh:** Script to rename all the elements in a directory.
+
+* **./auto:** Script to automate the joining of Uni lectures
+    * **data.sh**: File that contains the external data for the script (Mainly lecture links)
+    * **main.sh**: The auto script. Just use `./main.sh` to run.
 
 * **./liners:** One liner shell (FISH) scripts.
     * **file_size.sh:** Script to print the size of the file. `./file_size [FILE]`
