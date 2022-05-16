@@ -1,5 +1,3 @@
-# Shell Scripting
-
 <h1 id="header" align="center">
     Shel Scripting
     <div id="badges">
