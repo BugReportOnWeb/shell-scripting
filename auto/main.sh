@@ -2,9 +2,8 @@
 
 # Used to load lecture links. Modify data.sh for a personalised one.
 source ./data.sh  
-set week (date | awk '{print $1}')
 
-function lets_go
+function start
     while true
         # Lopping over hour/min/value(AM/PM) after every 10sec in negative result.
         set hour (date | awk '{print $5}' | cut -d: -f1)
@@ -100,5 +99,6 @@ function lets_go
 end
 
 # Main block
-lets_go $week
+set week (date | awk '{print $1}')
+start $week
 
