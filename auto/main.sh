@@ -20,13 +20,13 @@ function lets_go
                     $hour = "02" -a $min = "30" -a $vlaue = "PM"
 
                     echo -e "Opening MAIN link..."
-                    open $MAIN_LINK
+                    open $MAIN_LINK &
                     sleep 3530
                 else if test \ 
                     $hour = "09" -a $min = "00" -a $value = "AM"
 
                     echo -e "Opening OTHER link"
-                    open $DET_LINK
+                    open $DET_LINK &
                     sleep 3530
                 end
             case "Tuesday"
@@ -35,14 +35,14 @@ function lets_go
                     $hour = "01" -a $min = "35" -a $value = "PM"
 
                     echo -e "Opening MAIN link..."
-                    open $MAIN_LINK
+                    open $MAIN_LINK &
                     sleep 3530
                 else if test \
                     $hour = "10" -a $min = "50" -a $value = "AM" -o \
                     $hour = "03" -a $min = "25" -a $value = "PM"
 
                     echo -e "Opening OTHER link"
-                    open $DET_LINK
+                    open $DET_LINK &
                     sleep 3530
                 end
             case "Wednesday"
@@ -53,7 +53,7 @@ function lets_go
                     $hour = "03" -a $min = "25" -a $value = "PM"
 
                     echo -e "Opening MAIN link..."
-                    open $MAIN_LINK
+                    open $MAIN_LINK &
                     sleep 3530
                 end
             case "Thursday"
@@ -64,13 +64,13 @@ function lets_go
                     $hour = "02" -a $min = "30" -a $value = "PM"
 
                     echo -e "Opening MAIN link..."
-                    open $MAIN_LINK
+                    open $MAIN_LINK &
                     sleep 3530
                 else if test \
                     $hour = "01" -a $min = "35" -a $value = "PM"
 
                     echo -e "Opening OTHER link"
-                    open $DET_LINK
+                    open $DET_LINK &
                     sleep 3530
                 end
             case "Friday"
@@ -81,13 +81,13 @@ function lets_go
                     $hour = "03" -a $min = "25" -a $value = "PM"
 
                     echo -e "Opening MAIN link..."
-                    open $MAIN_LINK
+                    open $MAIN_LINK &
                     sleep 3530
                 else if test \
                     $hour = "01" -a $min = "35" -a $value = "PM"
 
                     echo -e "Opening OTHER link"
-                    open $DET_LINK
+                    open $DET_LINK &
                     sleep 3530
                 end
             case '*'
