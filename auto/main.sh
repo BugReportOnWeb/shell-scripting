@@ -1,14 +1,20 @@
 #!/usr/bin/env fish
 
-# Used to load lecture links. Modify data.sh for a personalised one.
-source ./data.sh  
+set LOC "/home/dev/Development/shellscripting/auto"     # Path to the main parent directory. Modify as per needed
+source $LOC/data.sh                                     # Used to load lecture links. Modify data.sh for a personalised one.
 
 function start
+    set count 1
+
     while true
         # Lopping over hour/min/value(AM/PM) after every 10sec in negative result.
         set hour (date | awk '{print $5}' | cut -d: -f1)
         set min (date | awk '{print $5}' | cut -d: -f2)
         set value (date | awk '{print $6}')
+
+        # Checking for times the loop has continued over
+        echo "Loading $count..."
+        set count (math $count + 1)
 
         # Cases for lectures on specific weekdays.
         switch $argv
