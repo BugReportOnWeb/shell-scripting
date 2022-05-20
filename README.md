@@ -1,5 +1,5 @@
 <h1 id="header" align="center">
-    Shel Scripting
+    Shell Scripting
     <div id="badges">
         <img src="https://img.shields.io/github/last-commit/BugReportOnWeb/shell-scripting" />
     </div>
