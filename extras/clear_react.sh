@@ -11,13 +11,15 @@ rm ./src/assets/react.svg ./src/App.css
 
 # Changing App.jsx boilerplate
 cat <<EOF > ./src/App.jsx
-cosnt App = () => {
+const App = () => {
     return (
         <div className='App'>
             <h1>Hello World</h1>
         </div>
     )
 }
+
+export default App
 EOF
 
 # Changing index.css boilerplate
