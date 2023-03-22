@@ -39,8 +39,35 @@ body {
 }
 EOF
 
+# Initilize a git repo && Add .gitignore
+git init
+cat <<EOF > ./.gitignore
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+
+# testing
+/coverage
+
+# production
+/build
+
+# misc
+.DS_Store
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+EOF
+
 # Commiting the changes
-git commit -am "Initial commit"
+git add .
+git commit -m "Initial commit"
 
 # Heading inside the src dir
 cd ./src
