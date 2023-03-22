@@ -7,7 +7,7 @@ npm i
 rm ./public/vite.svg
 
 # Cleaning src dir
-rm ./assets/react.svg App.css
+rm ./src/assets/react.svg ./src/App.css
 
 # Changing App.jsx boilerplate
 cat <<EOF > ./src/App.jsx
