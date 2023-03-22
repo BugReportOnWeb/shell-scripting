@@ -1,5 +1,8 @@
 #!/usr/bin/env sh
 
+# Installing dependencies
+npm i
+
 # Cleaning public dir
 rm ./public/vite.svg
 
