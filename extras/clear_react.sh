@@ -1,25 +1,39 @@
 #!/usr/bin/env sh
 
 # Cleaning public dir
-rm ./public/logo*.png
+rm ./public/vite.svg
 
 # Cleaning src dir
-rm ./src/App.css \
-    ./src/App.test.js \
-    ./src/setupTests.js \
-    ./src/logo.svg
+rm ./assets/react.svg App.css
 
-# Changing App.js boilerplate
-cat <<EOF > ./src/App.js
-const App = () => {
+# Changing App.jsx boilerplate
+cat <<EOF > ./src/App.jsx
+cosnt App = () => {
     return (
         <div className='App'>
-            <h1>Hello World!</h1>
+            <h1>Hello World</h1>
         </div>
-    );
+    )
+}
+EOF
+
+# Changing index.css boilerplate
+cat <<EOF > ./src/index.css
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+
+*,
+*::before,
+*::after {
+    font-family: 'Rubik', sans-serif;
+    box-sizing: border-box;
+    margin: 0px;
 }
 
-export default App;
+body {
+    height: 100vh;
+    background-color: black;
+    color: white;
+}
 EOF
 
 # Commiting the changes
@@ -27,4 +41,3 @@ git commit -am "Initial commit"
 
 # Heading inside the src dir
 cd ./src
-
