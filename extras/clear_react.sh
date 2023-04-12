@@ -1,4 +1,4 @@
-#!/usr/bin/env sh
+#!/usr/bin/env bash
 
 # Installing dependencies
 npm i
@@ -8,10 +8,11 @@ rm ./public/vite.svg
 
 # Cleaning src dir
 rm ./src/assets/react.svg ./src/App.css
+rmdir ./src/assets/
 
 # Changing App.jsx boilerplate
-cat <<EOF > ./src/App.jsx
-const App = () => {
+cat <<EOF > ./src/App.tsx
+const App: React.FC = () => {
     return (
         <div className='App'>
             <h1>Hello World</h1>
@@ -29,12 +30,24 @@ cat <<EOF > ./src/index.css
 *,
 *::before,
 *::after {
-    font-family: 'Rubik', sans-serif;
     box-sizing: border-box;
     margin: 0px;
+    padding: 0px;
+}
+
+:root {
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
 }
 
 body {
+    font-family: 'Rubik', sans-serif;
+    color: #E5E5E5;
+    background-color: #1A1A1A;
+
     height: 100vh;
     background-color: black;
     color: white;
